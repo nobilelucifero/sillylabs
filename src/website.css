@@ -233,6 +233,12 @@ p a[href^="mailto:"]::before {
   line-height: 1.125;
 }
 
+@media only screen and (min-width: 721px) {
+  .headline {
+    padding-top: 0;
+  }
+}
+
 @keyframes FXfadeInTop2 {
   0% {
     opacity: 0;
