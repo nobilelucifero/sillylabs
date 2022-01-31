@@ -225,6 +225,7 @@ p a[href^="mailto:"]::before {
 }
 
 .headline {
+  padding-top: 40vmax;
   font-size: 5vw;
   font-size: clamp(1.25rem, -0.2134rem + 7.3171vw, 5rem);
   font-size: clamp(3.5rem, -0.2134rem + 7.3171vw, 5rem);
@@ -290,14 +291,25 @@ p a[href^="mailto:"]::before {
   position: absolute;
 }
 #bubblo-1 {
+  /* opacity: 0; */
   width: var(--bubblo-size);
   height: auto;
-  top: calc(50% - (var(--bubblo-size) / 2) - 7vmax);
-  left: calc(50% - (var(--bubblo-size) / 2) - 30vmax);
-  --bubblo-size: 20vmax;
+  top: 7vmax;
+  left: -14vmax;
+  --bubblo-size: 40vmax;
   --delta-bubblo-y: 50px;
   --bubble-animation-duration: 11s;
 }
+@media only screen and (min-width: 721px) {
+  #bubblo-1 {
+    width: var(--bubblo-size);
+    height: auto;
+    top: calc(50% - (var(--bubblo-size) / 2) - 7vmax);
+    left: calc(50% - (var(--bubblo-size) / 2) - 30vmax);
+    --bubblo-size: 20vmax;
+  }
+}
+
 #bubblo-1 .body-main {
   /* fill: #ccc; */
 }
@@ -307,27 +319,46 @@ p a[href^="mailto:"]::before {
 #bubblo-2 {
   width: var(--bubblo-size);
   height: auto;
-  top: calc(50% - (var(--bubblo-size) / 2));
-  left: calc(50% - (var(--bubblo-size) / 2) + 25vmax);
-  --bubblo-size: 14vmax;
+  top: 7vmax;
+  right: -5vmax;
+  --bubblo-size: 30vmax;
   --delta-bubblo-y: 60px;
   --bubble-animation-duration: 10s;
 }
 #bubblo-2 .face {
   fill: hsla(216, 96%, 10%, 0.9);
 }
+@media only screen and (min-width: 721px) {
+  #bubblo-2 {
+    width: var(--bubblo-size);
+    height: auto;
+    top: calc(50% - (var(--bubblo-size) / 2));
+    --bubblo-size: 14vmax;
+    right: unset;
+    left: calc(50% - (var(--bubblo-size) / 2) + 25vmax);
+  }
+}
 
 #bubblo-3 {
   width: var(--bubblo-size);
   height: auto;
-  top: calc(50% - (var(--bubblo-size) / 2) + 10vmax);
+  top: 36vmax;
   left: calc(50% - (var(--bubblo-size) / 2));
-  --bubblo-size: 10vmax;
+  --bubblo-size: 20vmax;
   --delta-bubblo-y: 60px;
   --bubble-animation-duration: 13s; /* 18 */
 }
 #bubblo-3 .face {
   fill: hsla(93, 96%, 10%, 0.9);
+}
+@media only screen and (min-width: 721px) {
+  #bubblo-3 {
+    width: var(--bubblo-size);
+    height: auto;
+    top: calc(50% - (var(--bubblo-size) / 2) + 10vmax);
+    left: calc(50% - (var(--bubblo-size) / 2));
+    --bubblo-size: 10vmax;
+  }
 }
 
 .bubblo {
