@@ -1,0 +1,59 @@
+<svg
+id="bubblo3"
+class="bubblo"
+          width="100"
+          height="100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle class="body" cx="50" cy="50" r="50" fill="#FE99B8" />
+          <circle
+          class="body-light"
+            cx="50"
+            cy="50"
+            r="50"
+            fill="url(#a)"
+            style="mix-blend-mode: soft-light"
+          />
+          <circle
+          class="body-dark"
+            cx="50"
+            cy="50"
+            r="50"
+            fill="url(#b)"
+            style="mix-blend-mode: overlay"
+          />
+          <g class="face" fill="#222">
+            <circle cx="40.454" cy="50.909" r="4.545" />
+            <circle cx="85.909" cy="50.909" r="4.545" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M48.716 54.886a2.273 2.273 0 0 1 3.215 0 15.909 15.909 0 0 0 22.498 0 2.273 2.273 0 1 1 3.215 3.214 20.454 20.454 0 0 1-28.928 0 2.273 2.273 0 0 1 0-3.214Z"
+            />
+          </g>
+          <defs>
+            <radialGradient
+              id="a"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="rotate(82.278 1.698 29.25) scale(54.1272)"
+            >
+              <stop stop-color="#fff" />
+              <stop offset="1" stop-color="#fff" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient
+              id="b"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="rotate(47.215 -43.1 111.12) scale(58.2191)"
+            >
+              <stop />
+              <stop offset="1" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+        </svg>

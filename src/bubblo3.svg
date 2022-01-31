@@ -1,0 +1,13 @@
+<svg width="320" height="320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="160" cy="160" r="160" fill="#FE99B8"/>
+<circle cx="160" cy="160" r="160" fill="url(#a)" style="mix-blend-mode:soft-light"/>
+<circle cx="160" cy="160" r="160" fill="url(#b)" style="mix-blend-mode:overlay"/>
+<g fill="#222">
+<circle cx="129.456" cy="162.909" r="14.546"/>
+<circle cx="274.909" cy="162.909" r="14.546"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M155.898 175.635a7.273 7.273 0 0 1 10.285 0 50.91 50.91 0 0 0 71.996 0 7.273 7.273 0 0 1 10.285 10.285 65.453 65.453 0 0 1-92.566 0 7.273 7.273 0 0 1 0-10.285Z"/></g>
+<defs>
+<radialGradient id="a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(82.278 5.435 93.598) scale(173.207)">
+<stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="b" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(47.215 -137.92 355.583) scale(186.301)"><stop/><stop offset="1" stop-opacity="0"/></radialGradient></defs>
+</svg>
