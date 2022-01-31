@@ -220,7 +220,7 @@ p a[href^="mailto:"]::before {
   margin-bottom: calc(var(--baseline) * 1.5);
 }
 
-.container:not(:first-child) {
+.fx-transition {
   animation: 0.75s ease-out FXfadeInTop2;
   animation-fill-mode: both;
   /*   transform-origin: 50%; */
@@ -251,6 +251,12 @@ p a[href^="mailto:"]::before {
   font-size: clamp(3.5rem, -0.2134rem + 7.3171vw, 5rem);
   font-weight: 900;
   line-height: 1.125;
+}
+
+@media only screen and (min-width: 721px) {
+  .headline {
+    padding-top: 0;
+  }
 }
 
 @keyframes FXfadeInTop2 {

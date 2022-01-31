@@ -203,7 +203,7 @@ p a[href^="mailto:"]::before {
   margin-bottom: calc(var(--baseline) * 1.5);
 }
 
-.container:not(:first-child) {
+.fx-transition {
   animation: 0.75s ease-out FXfadeInTop2;
   animation-fill-mode: both;
   /*   transform-origin: 50%; */
