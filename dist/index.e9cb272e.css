@@ -250,7 +250,7 @@ strike {
 }
 
 .headline {
-  padding-top: 4rem;
+  padding-top: 40vmax;
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 900;
   line-height: 1.25;
@@ -258,7 +258,7 @@ strike {
 
 @media only screen and (min-width: 721px) {
   .headline {
-    padding-top: 0;
+    padding-top: 8rem;
     font-size: clamp(3.5rem, 5vw, 5rem);
   }
 }
@@ -317,7 +317,7 @@ strike {
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -350,8 +350,8 @@ strike {
   #bubblo-1 {
     width: var(--bubblo-size);
     height: auto;
-    top: calc(35% - (var(--bubblo-size) / 2)  - 7vmax);
-    left: calc(50% - (var(--bubblo-size) / 2)  - 30vmax);
+    top: calc(25% - (var(--bubblo-size) / 2)  - 7vmax);
+    left: calc(55% - (var(--bubblo-size) / 2)  - 30vmax);
     --bubblo-size: 20vmax;
   }
 }
@@ -378,7 +378,7 @@ strike {
   #bubblo-2 {
     width: var(--bubblo-size);
     height: auto;
-    top: calc(25% - (var(--bubblo-size) / 2) );
+    top: calc(15% - (var(--bubblo-size) / 2) );
     --bubblo-size: 14vmax;
     right: unset;
     left: calc(50% - (var(--bubblo-size) / 2)  + 25vmax);
@@ -403,7 +403,7 @@ strike {
   #bubblo-3 {
     width: var(--bubblo-size);
     height: auto;
-    top: calc(12.5% - (var(--bubblo-size) / 2)  + 10vmax);
+    top: calc(7.5% - (var(--bubblo-size) / 2)  + 10vmax);
     left: calc(50% - (var(--bubblo-size) / 2) );
     --bubblo-size: 10vmax;
   }
