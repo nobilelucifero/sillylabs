@@ -1,0 +1,461 @@
+@import "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap";
+:root {
+  --background-color: #f5f5f5;
+  --fontSize: 1rem;
+  --lineHeight: calc(var(--fontSize) * 1.5);
+  --baseline: calc(var(--lineHeight) / 2);
+  --sansFont: "Plus Jakarta Sans";
+  --h1-size: 2.8rem;
+  --h2-size: 2.2rem;
+  --h3-size: 1.4rem;
+  --h4-size: 1.1rem;
+  --font-weight-bolder: 500;
+  --font-weight-bold: 700;
+  --fg-color: #bf4040;
+  --fg-accent-color: #0d80f2;
+  --fg-accent-color--light: #0d80f240;
+  --fg-accent-color--lighter: #0d80f214;
+  --spacing-xs: .5rem;
+  --spacing-sm: .75rem;
+  --spacing: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --width-xl: 80rem;
+  --width-lg: 56rem;
+  --animation-delay-md: .5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--sansFont), -system-ui, system-ui, sans-serif;
+  font-size: var(--fontSize);
+  line-height: var(--lineHeight);
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  letter-spacing: -.01em;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-variant-ligatures: contextual common-ligatures;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "cv10" 1;
+}
+
+:first-child {
+  margin-top: unset;
+}
+
+:last-child {
+  margin-bottom: unset;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+[disabled] {
+  pointer-events: none;
+  opacity: .3;
+}
+
+.horizontal {
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+}
+
+.vertical {
+  flex-direction: column;
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  flex: 1;
+}
+
+h1 {
+  font-size: var(--h1-size);
+  line-height: calc(var(--lineHeight) * 2);
+  letter-spacing: -.025em;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  line-height: calc(var(--lineHeight) * 2);
+  letter-spacing: -.03em;
+}
+
+h3 {
+  font-size: var(--h3-size);
+  line-height: calc(var(--lineHeight) * 2);
+  letter-spacing: -.02em;
+}
+
+h2 {
+  font-size: var(--h4-size);
+  line-height: calc(var(--lineHeight) * 2);
+  letter-spacing: -.012em;
+}
+
+h1, h2, h3, h4 {
+  padding-top: calc(var(--baseline) * .75);
+  padding-bottom: calc(var(--baseline) * .25);
+  margin-top: 0;
+  margin-bottom: var(--baseline);
+}
+
+* + h1, h2, h3, h4 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+* + p {
+  margin-top: calc(var(--baseline) / 2);
+}
+
+p a {
+  font-weight: var(--font-weight-bolder);
+  color: var(--fg-accent-color);
+  border-bottom: 2px solid var(--fg-accent-color--light);
+  text-decoration: none;
+}
+
+p a:hover {
+  background-color: var(--fg-accent-color--lighter);
+  border-bottom-color: var(--fg-accent-color);
+  border-bottom-style: solid;
+}
+
+p a:active {
+  border-bottom-style: dashed;
+}
+
+p a:focus {
+  outline: inherit;
+}
+
+p a:visited {
+  color: var(--fg-accent-color);
+}
+
+strike {
+  opacity: .5;
+}
+
+.mt-xl {
+  margin-top: var(--spacing-xl);
+}
+
+.parent .section {
+  place-items: center;
+  display: grid;
+}
+
+.container {
+  max-width: var(--width-xl);
+  padding: 0 var(--spacing);
+  margin-bottom: var(--spacing-lg);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 360px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+.container-grid {
+  gap: var(--spacing-xl);
+  flex-direction: column;
+  display: flex;
+}
+
+@media only screen and (min-width: 721px) {
+  .container-grid {
+    gap: var(--spacing-xl);
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+  }
+}
+
+.tag-list small {
+  opacity: .75;
+  gap: 1ch;
+  font-size: .75rem;
+  line-height: 1rem;
+  display: flex;
+}
+
+.tag-item {
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.container--content p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.p-lead {
+  font-size: var(--h3-size);
+  opacity: .96;
+  margin-top: calc(var(--fontSize) * 1.5);
+  margin-bottom: calc(var(--fontSize) * 3);
+  line-height: 1.5;
+}
+
+@media only screen and (min-width: 721px) {
+  .p-lead {
+    font-size: var(--h2-size);
+    margin-top: calc(var(--fontSize) * 3);
+    margin-bottom: calc(var(--fontSize) * 6);
+  }
+}
+
+.fx-transition {
+  opacity: 0;
+  animation: 1.25s ease-out both FXfadeInTop2;
+}
+
+.fx-transition:nth-child(1) {
+  animation-delay: calc(var(--animation-delay-md) * 1);
+}
+
+.fx-transition:nth-child(2) {
+  animation-delay: calc(var(--animation-delay-md) * 3);
+}
+
+.fx-transition:nth-child(3) {
+  animation-delay: calc(var(--animation-delay-md) * 4);
+}
+
+.fx-transition:nth-child(4) {
+  animation-delay: calc(var(--animation-delay-md) * 7);
+}
+
+.logo {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.headline {
+  padding-top: 40vmax;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+@media only screen and (min-width: 721px) {
+  .headline {
+    padding-top: 12rem;
+    font-size: clamp(3.5rem, 5vw, 5rem);
+  }
+}
+
+@keyframes FXfadeInTop2 {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes FXfadeInBottom {
+  0% {
+    opacity: 0;
+    top: translateY(.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    top: translateY(0);
+  }
+}
+
+@keyframes FXfadeInTop {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 88px, 0);
+  }
+
+  52% {
+    opacity: 0;
+    transform: translate3d(0, -16px, 0)rotateZ(-30deg)scaleY(1.125);
+  }
+
+  75% {
+    transform: translate3d(0, 8px, 0)rotateZ(15deg)scaleY(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+:root {
+  --delta-bubblo-y: 40px;
+  --bubble-animation-duration: 4s;
+}
+
+.full-background {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.full-background img {
+  width: 100%;
+  height: auto;
+  opacity: .3;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bubblo {
+  position: absolute;
+}
+
+#bubblo-1 {
+  width: var(--bubblo-size);
+  height: auto;
+  --bubblo-size: 40vmax;
+  --delta-bubblo-y: 50px;
+  --bubble-animation-duration: 11s;
+  top: 7vmax;
+  left: -14vmax;
+}
+
+@media only screen and (min-width: 721px) {
+  #bubblo-1 {
+    width: var(--bubblo-size);
+    height: auto;
+    top: calc(25% - (var(--bubblo-size) / 2)  - 7vmax);
+    left: calc(55% - (var(--bubblo-size) / 2)  - 30vmax);
+    --bubblo-size: 20vmax;
+  }
+}
+
+#bubblo-1 .face {
+  fill: #320110cc;
+}
+
+#bubblo-2 {
+  width: var(--bubblo-size);
+  height: auto;
+  --bubblo-size: 30vmax;
+  --delta-bubblo-y: 60px;
+  --bubble-animation-duration: 10s;
+  top: 7vmax;
+  right: -5vmax;
+}
+
+#bubblo-2 .face {
+  fill: #011532e6;
+}
+
+@media only screen and (min-width: 721px) {
+  #bubblo-2 {
+    width: var(--bubblo-size);
+    height: auto;
+    top: calc(15% - (var(--bubblo-size) / 2) );
+    --bubblo-size: 14vmax;
+    right: unset;
+    left: calc(50% - (var(--bubblo-size) / 2)  + 25vmax);
+  }
+}
+
+#bubblo-3 {
+  width: var(--bubblo-size);
+  height: auto;
+  top: 36vmax;
+  left: calc(50% - (var(--bubblo-size) / 2) );
+  --bubblo-size: 20vmax;
+  --delta-bubblo-y: 60px;
+  --bubble-animation-duration: 13s;
+}
+
+#bubblo-3 .face {
+  fill: #173201e6;
+}
+
+@media only screen and (min-width: 721px) {
+  #bubblo-3 {
+    width: var(--bubblo-size);
+    height: auto;
+    top: calc(7.5% - (var(--bubblo-size) / 2)  + 8vmax);
+    --bubblo-size: 10vmax;
+  }
+}
+
+.bubblo {
+  animation: var(--bubble-animation-duration) ease-in-out FxBodyMove infinite;
+  transform-origin: 50%;
+}
+
+.bubblo .face {
+  animation: var(--bubble-animation-duration) ease-in-out FxFaceMove infinite;
+  transform-origin: 50%;
+}
+
+.body-light {
+  animation: var(--bubble-animation-duration) ease-in-out FXfaceHover infinite;
+}
+
+.body-dark {
+  animation: var(--bubble-animation-duration) ease-in-out FXfaceHover infinite reverse;
+}
+
+#bubblo-2, #bubblo-2 .face {
+  animation-delay: -1s;
+}
+
+#bubblo-3, #bubblo-3 .face {
+  animation-delay: -2s;
+}
+
+@keyframes FxBodyMove {
+  0% {
+    transform: translateY(initial);
+  }
+
+  50% {
+    transform: translateY(var(--delta-bubblo-y)) scaleY(.98) rotateZ(-5deg);
+  }
+
+  100% {
+    transform: translateY(initial);
+  }
+}
+
+@keyframes FxFaceMove {
+  0% {
+  }
+
+  50% {
+  }
+
+  100% {
+  }
+}
+
+/*# sourceMappingURL=index.e9cb272e.css.map */
