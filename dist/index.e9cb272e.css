@@ -22,6 +22,7 @@
   --spacing-xl: 2rem;
   --width-xl: 80rem;
   --width-lg: 56rem;
+  --animation-delay-md: .5s;
 }
 
 * {
@@ -153,12 +154,6 @@ strike {
   margin-top: var(--spacing-xl);
 }
 
-.parent {
-  min-height: 100vh;
-  grid-template-rows: auto 1fr auto;
-  display: grid;
-}
-
 .parent .section {
   place-items: center;
   display: grid;
@@ -229,19 +224,23 @@ strike {
 
 .fx-transition {
   opacity: 0;
-  animation: .75s ease-out both FXfadeInTop2;
+  animation: 1.25s ease-out both FXfadeInTop2;
 }
 
-.container:nth-child(2) {
-  animation-delay: .25s;
+.fx-transition:nth-child(1) {
+  animation-delay: calc(var(--animation-delay-md) * 1);
 }
 
-.container:nth-child(3) {
-  animation-delay: .5s;
+.fx-transition:nth-child(2) {
+  animation-delay: calc(var(--animation-delay-md) * 3);
 }
 
-.container:nth-child(4) {
-  animation-delay: .75s;
+.fx-transition:nth-child(3) {
+  animation-delay: calc(var(--animation-delay-md) * 4);
+}
+
+.fx-transition:nth-child(4) {
+  animation-delay: calc(var(--animation-delay-md) * 7);
 }
 
 .logo {
@@ -258,7 +257,7 @@ strike {
 
 @media only screen and (min-width: 721px) {
   .headline {
-    padding-top: 8rem;
+    padding-top: 12rem;
     font-size: clamp(3.5rem, 5vw, 5rem);
   }
 }
@@ -266,7 +265,7 @@ strike {
 @keyframes FXfadeInTop2 {
   0% {
     opacity: 0;
-    transform: translateY(.5rem);
+    transform: translateY(1rem);
   }
 
   100% {
@@ -403,8 +402,7 @@ strike {
   #bubblo-3 {
     width: var(--bubblo-size);
     height: auto;
-    top: calc(7.5% - (var(--bubblo-size) / 2)  + 10vmax);
-    left: calc(50% - (var(--bubblo-size) / 2) );
+    top: calc(7.5% - (var(--bubblo-size) / 2)  + 8vmax);
     --bubblo-size: 10vmax;
   }
 }
